@@ -1,0 +1,21 @@
+import React from 'react'
+
+class Footer extends React.Component {
+    render() {
+        const styles = {
+            width: '100vw',
+            backgroundColor: 'royalblue',
+            color: 'white',
+            padding: '10px',
+            fontSize: '20px',
+
+        }
+        return (
+            <footer style={styles} className="footer">
+                <p>credits </p>
+            </footer>
+        )
+    }
+}
+
+export default Footer
