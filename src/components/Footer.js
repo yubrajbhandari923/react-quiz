@@ -3,7 +3,8 @@ import React from 'react'
 class Footer extends React.Component {
     render() {
         const styles = {
-            width: '100vw',
+            minWidth : '100vw',
+            maxWidth: '100vw',
             backgroundColor: 'royalblue',
             color: 'white',
             padding: '10px',

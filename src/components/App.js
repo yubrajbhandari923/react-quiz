@@ -11,6 +11,22 @@ import '../styles/app.css'
 import '../fonts/fonts.css'
 
 class App extends React.Component {
+    constructor(props){
+        super(props)
+        this.state ={
+            projects: [
+                ['Deemo project','Demo AAuthor'],
+                ['hh','hhhj']
+
+            ]
+        }
+        this.handleAddProject =this.handleAddProject.bind(this)
+    }
+    handleAddProject(name,author){
+        this.setState({
+            projects : [...this.state.projects , [name, author]]
+        })
+    }
     render() {
         const colors = {
             primary : '#1D3557',
@@ -21,8 +37,8 @@ class App extends React.Component {
         }
         return (
             <div>
-                <Navbar colors={colors} />
-                <Body colors={colors} />
+                <Navbar colors={colors} handleAddProject={this.handleAddProject} />
+                <Body colors={colors} projectsData={this.state.projects} />
                 <Footer colors={colors} />
             </div>
         )
